@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: Room Booking API
+  description: API for tracking room booking status
+  version: 1.0.0
+paths:
+  /api/booking_status/{booking_id}:
+    get:
+      summary: Get booking status by ID
+      parameters:
+        - in: path
+          name: booking_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+        '404':
+          description: Booking not found
+        '401':
+          description: Unauthorized

@@ -1,0 +1,74 @@
+<odoo>
+    <record id="view_master_ruangan_tree" model="ir.ui.view">
+        <field name="name">master.ruangan.tree</field>
+        <field name="model">master.ruangan</field>
+        <field name="arch" type="xml">
+            <tree string="Master Ruangan">
+                    <field name="nama_ruangan"/>
+                    <field name="tipe_ruangan"/>
+                    <field name="lokasi_ruangan"/>
+                    <!-- <field name="foto_ruangan" widget="image"/> -->
+                    <field name="kapasitas_ruangan"/>
+                    <field name="keterangan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_master_ruangan_form" model="ir.ui.view">
+        <field name="name">master.ruangan.form</field>
+        <field name="model">master.ruangan</field>
+        <field name="arch" type="xml">
+            <form string="Master Ruangan">
+                <group>
+                    <field name="nama_ruangan"/>
+                    <field name="tipe_ruangan"/>
+                    <field name="lokasi_ruangan"/>
+                     <field name="foto_ruangan" widget="image" class="img-thumbnail"
+                           options="{'max_width': 128, 'max_height': 128}"/>
+                    <field name="kapasitas_ruangan"/>
+                    <field name="keterangan"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_master_ruangan_kanban" model="ir.ui.view">
+        <field name="name">master.ruangan.kanban</field>
+        <field name="model">master.ruangan</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="nama_ruangan"/>
+                <field name="tipe_ruangan"/>
+                <field name="lokasi_ruangan"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <!-- Gambar dengan ukuran yang sudah ditentukan -->
+                            <div class="o-kanban-image">
+                                <img t-att-src="kanban_image('master.ruangan', 'foto_ruangan', record.id)"
+                                     class="img-thumbnail"
+                                     style="max-width: 128px; max-height: 128px;"/>
+                            </div>
+                            <div class="o-kanban-details">
+                                <strong><field name="nama_ruangan"/></strong>
+                                <div><field name="tipe_ruangan"/></div>
+                                <div><field name="lokasi_ruangan"/></div>
+                                <div><field name="kapasitas_ruangan"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+     <!-- Action to Open the Pemesanan Ruangan Views -->
+    <record id="action_master_ruangan" model="ir.actions.act_window">
+        <field name="name">Master Ruangan</field>
+        <field name="res_model">master.ruangan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_master_ruangan_tree"/>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,49 @@
+<odoo>
+    <!-- Tree View for Pemesanan Ruangan -->
+    <record id="view_pemesanan_ruangan_tree" model="ir.ui.view">
+        <field name="name">pemesanan.ruangan.tree</field>
+        <field name="model">pemesanan.ruangan</field>
+        <field name="arch" type="xml">
+            <tree string="Pemesanan Ruangan">
+                <field name="nomor_pemesanan"/>
+                <field name="ruangan_id"/>
+                <field name="nama_pemesan"/>
+                <field name="tanggal_pemesanan"/>
+                <field name="status_pemesanan"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_pemesanan_ruangan_form" model="ir.ui.view">
+        <field name="name">pemesanan.ruangan.form</field>
+        <field name="model">pemesanan.ruangan</field>
+        <field name="arch" type="xml">
+            <form string="Pemesanan Ruangan">
+                <group>
+                    <field name="nomor_pemesanan"/>
+                    <field name="ruangan_id"/>
+                    <field name="nama_pemesan"/>
+                    <field name="tanggal_pemesanan"/>
+                    <field name="status_pemesanan"/>
+                    <field name="catatan_pemesanan"/>
+                </group>
+                <footer>
+                    <button string="Set On Going" type="object" name="action_set_ongoing"
+                            attrs="{'invisible': [('status_pemesanan', '!=', 'draft')]}" class="btn-primary"/>
+                    <button string="Set Done" type="object" name="action_set_done"
+                            attrs="{'invisible': [('status_pemesanan', '!=', 'ongoing')]}" class="btn-success"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action to Open the Pemesanan Ruangan Views -->
+    <record id="action_pemesanan_ruangan" model="ir.actions.act_window">
+        <field name="name">Pemesanan Ruangan</field>
+        <field name="res_model">pemesanan.ruangan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_pemesanan_ruangan_tree"/>
+    </record>
+
+</odoo>

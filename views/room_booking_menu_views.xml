@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Menu untuk Master Ruangan -->
+    <menuitem id="menu_master_ruangan_root" name="Manajemen Ruangan"
+              sequence="1"/>
+    
+    <menuitem id="menu_master_ruangan" name="Master Ruangan"
+              parent="menu_master_ruangan_root" sequence="2"
+              action="action_master_ruangan"/>
+
+    <!-- Menu untuk Pemesanan Ruangan -->
+    <menuitem id="menu_pemesanan_ruangan" name="Pemesanan Ruangan"
+              parent="menu_master_ruangan_root" sequence="3"
+              action="action_pemesanan_ruangan"/>
+
+   
+</odoo>
+

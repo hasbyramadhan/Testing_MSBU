@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_master_ruangan,access_master_ruangan,model_master_ruangan,,1,1,1,1
+access_pemesanan_ruangan,access_pemesanan_ruangan,model_pemesanan_ruangan,,1,1,1,1
