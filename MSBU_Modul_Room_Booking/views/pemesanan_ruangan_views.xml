@@ -1,5 +1,4 @@
 <odoo>
-    <!-- Tree View for Pemesanan Ruangan -->
     <record id="view_pemesanan_ruangan_tree" model="ir.ui.view">
         <field name="name">pemesanan.ruangan.tree</field>
         <field name="model">pemesanan.ruangan</field>
@@ -38,7 +37,6 @@
         </field>
     </record>
 
-    <!-- Action to Open the Pemesanan Ruangan Views -->
     <record id="action_pemesanan_ruangan" model="ir.actions.act_window">
         <field name="name">Pemesanan Ruangan</field>
         <field name="res_model">pemesanan.ruangan</field>

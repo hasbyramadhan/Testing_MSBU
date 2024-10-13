@@ -5,11 +5,10 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/master_ruangan_views.xml',  # Pastikan file XML view di-include
+        'views/master_ruangan_views.xml', 
         'views/pemesanan_ruangan_views.xml',
-        'views/room_booking_menu_views.xml',  # Tambahkan jika ada file khusus untuk menu
-        'data/sequence_data.xml',  # Tambahkan baris ini
-        # 'data/swagger.yaml',
+        'views/room_booking_menu_views.xml',  
+        'data/sequence_data.xml', 
         # 'data/action_cron.xml',
 
     ],

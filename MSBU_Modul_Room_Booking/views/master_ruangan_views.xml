@@ -62,7 +62,6 @@
         </field>
     </record>
 
-     <!-- Action to Open the Pemesanan Ruangan Views -->
     <record id="action_master_ruangan" model="ir.actions.act_window">
         <field name="name">Master Ruangan</field>
         <field name="res_model">master.ruangan</field>

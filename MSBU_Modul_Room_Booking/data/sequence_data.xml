@@ -1,6 +1,5 @@
 <odoo>
     <data noupdate="1">
-        <!-- Sequence untuk Pemesanan Ruangan -->
         <record id="seq_pemesanan_ruangan" model="ir.sequence">
             <field name="name">Sequence Pemesanan Ruangan</field>
             <field name="code">pemesanan.ruangan</field>
